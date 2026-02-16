@@ -191,7 +191,7 @@ async def main():
                     # Attach source to job record and insert
                     job_record = dict(job)
                     # store human-friendly label as the source/category
-                    job_record['url_source'] = label
+                    job_record['categories'] = label
                     await db.async_insert_job(job_record)
                     await db.async_mark_job_seen(job['id'], url)
                     # Console output
@@ -337,7 +337,7 @@ if __name__ == "__main__":
         print(f"\n{'='*80}")
         print(f"Total jobs in database: {len(jobs)}")
         print(f"{'='*80}")
-        for idx, (job_id, title, description, jobType, published, budget, link, url_source) in enumerate(jobs, 1):
+        for idx, (job_id, title, description, jobType, published, budget, link, categories) in enumerate(jobs, 1):
             print(f"\n{'-'*80}")
             print(f"Job #{idx}")
             print(f"ID: {job_id}")
@@ -345,7 +345,7 @@ if __name__ == "__main__":
             print(f"Type: {jobType}")
             print(f"Published: {published}")
             print(f"Link: {link}")
-            print(f"Source: {url_source}")
+            print(f"Source: {categories}")
             print(f"Budget: {budget}")
             print(f"Description: {description[:200]}{'...' if len(description) > 200 else ''}")
         print(f"\n{'='*80}")
