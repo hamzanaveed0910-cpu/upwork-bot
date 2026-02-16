@@ -12,12 +12,7 @@
       "keyword": "web scraping",
       "channel_id": 1471801505806815376
     },
-    {
-      "url": "https://www.upwork.com/api/graphql/v1?alias=visitorJobSearch",
-      "label": "automation",
-      "keyword": "automation",
-      "channel_id": 1471801505806815376
-    },
+   
     {
       "url": "https://www.upwork.com/api/graphql/v1?alias=visitorJobSearch",
       "label": "chatbot",
