@@ -1,0 +1,50 @@
+0:00:17 Tab1 FinishNav36
+0:00:17 Tab1 PageLoad
+0:00:17 Tab1 PageLoad
+0:00:18 Tab1 StartNav37 #renderer-script #auto_subframe
+0:00:18 Tab1 FinishNav37
+0:00:18 Tab1 PageLoad
+0:00:18 Tab1 StartNav38 #renderer-script #auto_subframe
+0:00:18 Tab1 FinishNav38
+0:00:18 Tab1 PageLoad
+0:00:19 Tab1 StartNav39 #renderer-script #auto_subframe
+0:00:19 Tab1 FinishNav39
+0:00:19 Tab1 PageLoad
+0:00:19 Tab1 StartNav40 #renderer-script #auto_subframe
+0:00:19 Tab1 FinishNav40
+0:00:19 Tab1 PageLoad
+0:00:19 Tab1 StartNav41 #renderer-script #auto_subframe
+0:00:19 Tab1 FinishNav41
+0:00:19 Tab1 PageLoad
+0:00:19 Tab1 StartNav42 #renderer-script #auto_subframe
+0:00:19 Tab1 FinishNav42
+0:00:19 Tab1 PageLoad
+0:00:19 Tab1 StartNav43 #renderer-script #auto_subframe
+0:00:19 Tab1 FinishNav43
+0:00:19 Tab1 PageLoad
+0:00:19 Tab1 StartNav44 #renderer-script #auto_subframe
+0:00:19 Tab1 FinishNav44
+0:00:19 Tab1 PageLoad
+0:00:19 Tab1 StartNav45 #renderer-script #auto_subframe
+0:00:19 Tab1 FinishNav45
+0:00:19 Tab1 PageLoad
+0:00:19 Tab1 StartNav46 #renderer-script #auto_subframe
+0:00:19 Tab1 FinishNav46
+0:00:19 Tab1 PageLoad
+0:00:20 Tab1 StartNav47 #renderer-script #auto_subframe
+0:00:20 Tab1 FinishNav47
+0:00:20 Tab1 PageLoad
+0:00:20 Tab1 StartNav48 #renderer-script #auto_subframe
+0:00:20 Tab1 FinishNav48
+0:00:20 Tab1 PageLoad #failure
+0:00:20 Tab1 StartNav49 #renderer-script #auto_subframe
+0:00:20 Tab1 FinishNav49
+0:00:20 Tab1 PageLoad
+0:00:20 Tab1 StartNav50 #renderer-script #auto_subframe
+0:00:20 Tab1 FinishNav50
+0:00:20 Tab1 PageLoad
+0:00:20 Tab1 StartNav51 #renderer-script #auto_subframe
+0:00:20 Tab1 FinishNav51
+0:00:20 Tab1 PageLoad
+0:00:22 Widget Closed: TooltipAura
+0:00:25 Tab1 RemoveInfobar124

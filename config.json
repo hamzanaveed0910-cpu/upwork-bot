@@ -1,0 +1,54 @@
+{
+  "tracked_urls": [
+    {
+      "url": "https://www.upwork.com/api/graphql/v1?alias=visitorJobSearch",
+      "label": "Python Jobs",
+      "keyword": "python developer",
+      "channel_id": 1471801505806815376
+    },
+    {
+      "url": "https://www.upwork.com/api/graphql/v1?alias=visitorJobSearch",
+      "label": "Web Scraping",
+      "keyword": "web scraping",
+      "channel_id": 1471801505806815376
+    },
+    {
+      "url": "https://www.upwork.com/api/graphql/v1?alias=visitorJobSearch",
+      "label": "bot",
+      "keyword": "bot",
+      "channel_id": 1471801505806815376
+    },
+    {
+      "url": "https://www.upwork.com/api/graphql/v1?alias=visitorJobSearch",
+      "label": "css",
+      "keyword": "css",
+      "channel_id": 1471801505806815376
+    },
+    {
+      "url": "https://www.upwork.com/api/graphql/v1?alias=visitorJobSearch",
+      "label": "video-editor",
+      "keyword": "video editor",
+      "channel_id": 1471801505806815376
+    },
+    {
+      "url": "https://www.upwork.com/api/graphql/v1?alias=visitorJobSearch",
+      "label": "automation",
+      "keyword": "automation",
+      "channel_id": 1471801505806815376
+    },
+    {
+      "url": "https://www.upwork.com/api/graphql/v1?alias=visitorJobSearch",
+      "label": "scrapper",
+      "keyword": "scrapper",
+      "channel_id": 1471801505806815376
+    },
+    {
+      "url": "https://www.upwork.com/api/graphql/v1?alias=visitorJobSearch",
+      "label": "chatbot",
+      "keyword": "chatbot",
+      "channel_id": 1471801505806815376
+    }
+  ],
+  "fetch_interval": 30,
+  "token_refresh_hours": 11
+}

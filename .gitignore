@@ -1,0 +1,6 @@
+.env
+jobs.db
+bot.log
+upwork_bot_profile/
+__pycache__/
+*.pyc

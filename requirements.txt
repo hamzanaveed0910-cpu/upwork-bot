@@ -1,0 +1,7 @@
+discord.py
+python-dotenv
+curl-cffi
+DrissionPage
+psutil
+colorama
+curl-cffi[requests]

@@ -1,0 +1,165 @@
+# Upwork Bot Flow Explained 
+
+This bot helps you find jobs on Upwork automatically. Here’s how everything works, step by step, in easy words:
+
+---
+
+## 1. What does the bot do?
+- It logs into Upwork like a real person.
+- It grabs job listings using a special search.
+- It saves jobs in a database so you don’t see repeats.
+- You can filter jobs by keyword (like "python").
+
+---
+
+## 2. How does it look like a real user?
+- The bot uses a browser (Chrome) to visit Upwork.
+- It grabs special info called "headers" and "tokens" from the browser. These are needed so Upwork thinks you’re a real person, not a bot.
+- This is done in the file: `core/auth_manager.py`.
+
+---
+
+## 3. Where are tokens received?
+- The bot opens Chrome and listens to all web traffic.
+- When Upwork sends a job search request, the bot grabs the headers/tokens from that request.
+- If it doesn’t get the main token, it tries a backup.
+
+---
+
+## 4. Which query is targeted?
+- The bot uses a special GraphQL query to ask Upwork for jobs.
+- This query is in `core/scraper.py`.
+- The query can include a keyword to filter jobs (like "python").
+
+---
+
+## 5. Which libraries are used and why?
+- `curl_cffi.requests`: Lets the bot send web requests pretending to be Chrome.
+- `DrissionPage`: Opens Chrome and listens for web traffic to grab tokens.
+- `sqlite3`: Saves jobs in a database so you don’t see the same job twice.
+- `asyncio`: Lets the bot do things in the background (like keep checking for jobs).
+
+---
+
+## 6. How does the bot get jobs?
+- After getting tokens, the bot sends a request to Upwork using the GraphQL query.
+- It gets a list of jobs and saves them in the database.
+- It prints new jobs to the screen.
+- It keeps checking for new jobs every 30 seconds.
+
+---
+
+## 7. How does keyword filtering work?
+- You can give the bot a keyword (like "python") and it will only show jobs with that keyword.
+- This is done in the `fetch_jobs` function in `core/scraper.py`.
+
+---
+
+## 8. What happens if something goes wrong?
+- If the bot loses its token or can’t get jobs, it tries to refresh the token by opening Chrome again.
+- It keeps trying until it works.
+
+---
+
+## 9. Where is everything saved?
+- Jobs are saved in a file called `jobs.db` using SQLite.
+- The database functions are in `core/db.py`.
+
+---
+
+## 10. What is the test file for?
+- `test_keyword_filter.py` lets you test if keyword filtering works.
+- It runs the bot, grabs tokens, searches for jobs with a keyword, and prints them.
+
+---
+
+## 11. What do you need to run the bot?
+- Chrome installed on your computer.
+- Python and the required libraries installed.
+- The bot will handle everything else!
+
+---
+
+## 12. Summary
+- The bot pretends to be a real user, grabs tokens, searches for jobs, saves them, and keeps checking for new jobs.
+- You can filter jobs by keyword.
+- If anything breaks, it tries to fix itself.
+
+---
+
+If you want to change how the bot works, look for the comments in the code files. They explain everything in easy words!
+
+
+==
+
+# What Each Code File Does
+
+Here’s what every main file in your Upwork bot project does, in the easiest words possible:
+
+---
+
+## main.py
+- This is the main file that starts the bot.
+- It runs everything: gets tokens, fetches jobs, saves jobs, and keeps checking for new jobs.
+- If you want to run the bot, you run this file.
+
+---
+
+## core/auth_manager.py
+- This file helps the bot pretend to be a real person.
+- It opens Chrome, logs into Upwork, and grabs the special info (tokens/headers) needed to search for jobs.
+- Without this, the bot can’t get jobs from Upwork.
+
+---
+
+## core/scraper.py
+- This file is the “job searcher.”
+- It sends a special request (GraphQL query) to Upwork to get job listings.
+- It can search for jobs with any keyword you want.
+- It returns the job info to the main bot.
+
+---
+
+## core/db.py
+- This file saves jobs in a database (jobs.db) so you don’t see the same job twice.
+- It can add new jobs, check if a job is already saved, and get all saved jobs.
+
+---
+
+## core/logger.py
+- This file helps print messages in a nice way, so you know what the bot is doing.
+- It’s not required for the bot to work, but it makes things easier to understand.
+
+---
+
+## test_keyword_filter.py
+- This is a test file to check if searching jobs by keyword works.
+- It runs the bot, searches for jobs with a keyword (like “python”), and prints the results.
+
+---
+
+## requirements.txt
+- This file lists all the Python libraries you need to install for the bot to work.
+- You only need to use it when setting up the bot for the first time.
+
+---
+
+## jobs.db
+- This is the database file where all found jobs are saved.
+- You don’t need to open or edit this file yourself.
+
+---
+
+## bot_profile/ and upwork_bot_profile/
+- These folders store browser data so the bot can look like a real user to Upwork.
+- They help the bot stay logged in and trusted.
+- Don’t delete these unless you want to reset your login.
+
+---
+
+## .env
+- This file is for secret settings (if you ever need them). It’s usually empty or optional for this bot.
+
+---
+
+If you ever get lost, just check this file or the comments in the code. Everything is explained in the simplest way possible!
